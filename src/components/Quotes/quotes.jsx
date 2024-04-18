@@ -11,9 +11,11 @@ function QuotesDisplay() {
             try {
                     const apiUrl = `https://api.quotable.io/random`;
                     const response = await axios.get(apiUrl);
-                    setQuote(response.data);
+                    setQuote(response.data.content);
+                    setAuthor(response.data.author)
                     // setAuthor(response.data.author);
-                    console.log(response.data)
+                    console.log(response.data.content)
+                    console.log(response.data.author)
                 } catch (error) {
                     setError('Error getting qoute ' + error.message);
                 }
@@ -21,15 +23,12 @@ function QuotesDisplay() {
         }
         fetchQuote();
     }, []);
-
-
-
     return (
         <>
         <div>
             {error && <div>{error}</div>}
-            <p>Hello from quotes</p>
             <p>{quote}</p>
+            <p>{author}</p>
 
         </div>
 
