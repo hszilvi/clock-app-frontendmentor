@@ -1,14 +1,21 @@
 
 
-import './App.css'
-import Quotes from './components/Quotes/quotes'
+import './App.css';
+import Quotes from './components/Quotes/quotes';
+import Location from './components/Location/location';
+import Data from './components/Data/data';
 
 function App() {
 
   return (
     <>
-<Quotes/>
-Hello
+    <div id="overlay">
+
+
+      <Quotes/>
+      <Location/>
+      <Data/>
+    </div>
     </>
   )
 }
