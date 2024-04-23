@@ -11,26 +11,41 @@ body {
   min-width: 375px;
   height: 667px;
   position: relative;
-  /* margin: 0 auto; */
-  padding: 0;
+  margin: 0 auto;
+  padding: 2em;
   /* text-align: center; */
   background-image: url(/src/assets/mobile/bg-image-daytime.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border: 2px solid red;
-  /* color: white; */
+  /* border: 2px solid red; */
+  color: white;
 
 }
 #overlay {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: (10, 10, 10, 0.5);
-  z-index: 2;
-  border: 2px solid yellow;
+  background-color: black;
+  opacity: 40%;
+  z-index: 20;
+  /* border: 2px solid yellow; */
 
+}
+.quote-wrapper {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.quote-text {
+  font-size: .7em;
+  line-height: 1.8em;
+}
+.author {
+  font-size: .7em;
+  font-weight: 700;
+  margin-top: 1.7em;
 }

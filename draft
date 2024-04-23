@@ -1,0 +1,18 @@
+    return (
+        <>
+        <div>
+            {error && <div>{error}</div>}
+            {/* <div>{time}</div> */}
+            <div>{moment(time).format("HH:MM")}</div>
+            <div>{greating}</div>
+
+            <p>{abb}</p>
+            <p>Day of the year {dayOfYear}</p>
+            <p>Day of the week {dayOfWeek}</p>
+            <p>Week number {numberOfWeek}</p>
+
+        </div>
+
+        
+        </>
+    )

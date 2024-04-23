@@ -2,9 +2,26 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function LocationDisplay() {
+    const [ip, setIp] = useState([])
     const [city, setCity] = useState([]);
     const [country, setCountry] = useState([]);
     const [error, setError] = useState('');
+    
+    
+    useEffect(() => {
+        async function getIp() {
+            try {
+                const res = await axios.get(`https://api64.ipify.org?format=json`);
+                // console.log(res.data);
+                setIp(res.data.ip);
+            } catch (err) {
+                setError('error getting ip ')
+            }
+        }
+        getIp()
+    }, []);
+
+
 
     useEffect(() => {
         async function fetchLocation() {
@@ -14,7 +31,7 @@ function LocationDisplay() {
                     setCity(response.data.data.location.city.name);
                     setCountry(response.data.data.location.country.ioc)
                     // console.log(response.data.data.location.country.ioc)
-                    console.log(response.data.data.location.city.name)
+                    // console.log(response.data.data.location.city.name)
                 } catch (error) {
                     setError('Error getting location ' + error.message);
                 }
@@ -26,9 +43,8 @@ function LocationDisplay() {
         <>
         <div>
             {error && <div>{error}</div>}
-            <p>{city}</p>
-            <p>{country}</p>
-
+            <p>in {city}, {country}</p>
+            
         </div>
 
         
