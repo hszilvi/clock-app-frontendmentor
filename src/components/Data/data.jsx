@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function TimeDisplay({ moreLess }) {
-    const [abb, setAbb] = useState('');
+    // const [abb, setAbb] = useState('');
     const [dayOfWeek, setDayOfWeek] = useState('');
     const [dayOfYear, setDayOfYear] = useState('');
     const [numberOfWeek, setNumberOfWeek] = useState('');
@@ -14,7 +14,7 @@ function TimeDisplay({ moreLess }) {
             try {
                     const apiUrl = `http://worldtimeapi.org/api/timezone/Europe/London`;
                     const response = await axios.get(apiUrl);
-                    setAbb(response.data.abbreviation);
+                    // setAbb(response.data.abbreviation);
                     setDayOfWeek(response.data.day_of_week);
                     setDayOfYear(response.data.day_of_year);
                     setNumberOfWeek(response.data.week_number);
@@ -31,7 +31,7 @@ function TimeDisplay({ moreLess }) {
         {!moreLess && (
             <div>
                 {error && <div>{error}</div>}
-                <p>{abb}</p>
+                {/* <p>{abb}</p> */}
                 <p>Current Timezone {timeZone}</p>
                 <p>Day of the year {dayOfYear}</p>
                 <p>Day of the week {dayOfWeek}</p>
