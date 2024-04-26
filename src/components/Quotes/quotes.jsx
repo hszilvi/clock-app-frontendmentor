@@ -8,29 +8,21 @@ function QuotesDisplay({ moreLess }) {
     const [author, setAuthor] = useState([]);
     const [error, setError] = useState('');
 
-    // useEffect(() => {
-        async function fetchQuote() {
-            try {
-                    const apiUrl = `https://api.quotable.io/random`;
-                    const response = await axios.get(apiUrl);
-                    setQuote(response.data.content);
-                    setAuthor(response.data.author)
-                    // setAuthor(response.data.author);
-                    // console.log(response.data.content)
-                    // console.log(response.data.author)
-                } catch (error) {
-                    setError('Error getting qoute ' + error.message);
-                }
+    async function fetchQuote() {
+        try {
+                const apiUrl = `https://api.quotable.io/random`;
+                const response = await axios.get(apiUrl);
+                setQuote(response.data.content);
+                setAuthor(response.data.author)
+                // console.log(response.data)
+            } catch (error) {
+                setError('Error getting qoute ' + error.message);
+            }
+    }
 
-        }
-        // fetchQuote();
-    // }, []);
     useEffect(() => {
         fetchQuote();
     }, []);
-
-    // const quoteContent = quote;
-    // const quoteAuthor = author;
     const handleQuoteRefresh = () => {
         fetchQuote();
     }
