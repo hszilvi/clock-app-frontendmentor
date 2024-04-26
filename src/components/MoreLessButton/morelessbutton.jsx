@@ -14,7 +14,7 @@ const MoreLessBtn = ({ moreLess, setMoreLess }) => {
             aria-labelledby="up-arrow-icon"
           >
             <title id="up-arrow-icon">Up arrow</title>
-            <g fill="none" fillRule="evenodd">
+            <g fill="#000000" fillRule="evenodd">
               <circle fill="" cx="20" cy="20" r="20" />
               <path stroke="#FFF" strokeWidth="2" d="m14 18 6 6 6-6" />
             </g>
@@ -22,7 +22,7 @@ const MoreLessBtn = ({ moreLess, setMoreLess }) => {
         </>
       ) : (
         <>
-          less
+          less 
           <svg
             className="btn-svg"
             width="40"
@@ -31,7 +31,7 @@ const MoreLessBtn = ({ moreLess, setMoreLess }) => {
             aria-labelledby="down-arrow-icon"
           >
             <title id="down-arrow-icon">Down arrow</title>
-            <g fill="none" fillRule="evenodd">
+            <g fill="" fillRule="evenodd">
               <circle fill="" cx="20" cy="20" r="20" />
               <path stroke="#FFF" strokeWidth="2" d="M14 23l6-6 6 6" />
             </g>

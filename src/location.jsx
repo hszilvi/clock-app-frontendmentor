@@ -41,17 +41,19 @@ function LocationDisplay() {
         }
         fetchLocation();
     }, []);
-    return (
-        <>
-        <div>
-            {error && <div>{error}</div>}
-            <p>in {city}, {country}</p>
-            <p>{timezone}</p>
+    return [city, country, timezone]
+    // (
+
+        // <>
+        // <div>
+        //     {error && <div>{error}</div>}
+        //     <p>in {city}, {country}</p>
+        //     <p>{timezone}</p>
             
-        </div>
+        // </div>
 
         
-        </>
-    )
+        // </>
+    // )
 }
 export default LocationDisplay;

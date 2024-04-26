@@ -1,6 +1,7 @@
-
+import React from 'react';
+// import {location} from './location';
 function Time() {
-    // const {city, country, timezone } = location;
+    // const { timezone } = location;
     
     const date = new Date();
     const hour = date.getHours();
@@ -33,8 +34,9 @@ function Time() {
 
         <div className="time-container">
           <div className="time-content">{hour}:{minutes}</div>
-        
+        {/* <div>{timezone}</div> */}
         </div>
+
         </>
     )
 }
