@@ -7,6 +7,7 @@ import MoreLessBtn from './components/MoreLessButton/morelessbutton';
 import React, { useState } from 'react';
 // import moment from 'moment-timezone';
 import Time from './components/Time/time';
+import ExpandView from './components/Expand/expand';
 
 function App() {
   const [moreLess, setMoreLess] = useState(true);
@@ -31,8 +32,10 @@ function App() {
           <MoreLessBtn moreLess={moreLess} setMoreLess={setMoreLess} />        
           
           </div>
-      </div>
     <Data moreLess={moreLess} setMoreLess={setMoreLess}/>
+
+    {/* <Data/> */}
+      </div>
 
 
     

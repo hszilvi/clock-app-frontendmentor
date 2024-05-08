@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment-timezone';
 // import {location} from './location';
 function Time() {
     // const { timezone } = location;
@@ -6,6 +7,11 @@ function Time() {
     const date = new Date();
     const hour = date.getHours();
     const minutes = date.getMinutes();
+    const timeZone = moment.tz.guess();
+    const timeZoneOffset = date.getTimezoneOffset();
+    const abb = moment.tz.zone(timeZone).abbr(timeZoneOffset);
+    console.log('abb' , abb)
+
 
     return (
         <>
@@ -34,7 +40,7 @@ function Time() {
 
         <div className="time-container">
           <div className="time-content">{hour}:{minutes}</div>
-        {/* <div>{timezone}</div> */}
+        <div>{abb}</div>
         </div>
 
         </>

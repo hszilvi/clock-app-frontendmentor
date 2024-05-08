@@ -19,7 +19,7 @@ function TimeDisplay({ moreLess }) {
                     setDayOfYear(response.data.day_of_year);
                     setNumberOfWeek(response.data.week_number);
                     setTimeZone(response.data.timezone);
-                    // console.log(response.data)
+                    console.log(response.data)
                 } catch (error) {
                     setError('Error getting data ' + error.message);
                 }
@@ -29,15 +29,16 @@ function TimeDisplay({ moreLess }) {
     return (
         <>
         {!moreLess && (
-            <div>
+            <div className='expand-content'>
                 {error && <div>{error}</div>}
+
                 {/* <p>{abb}</p> */}
                 <p>Current Timezone {timeZone}</p>
                 <p>Day of the year {dayOfYear}</p>
                 <p>Day of the week {dayOfWeek}</p>
                 <p>Week number {numberOfWeek}</p>
             </div>         
-        )}
+        )} 
         </>
     )
 }

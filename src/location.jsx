@@ -32,7 +32,7 @@ function LocationDisplay() {
                     setCity(response.data.data.location.city.name);
                     setCountry(response.data.data.location.country.ioc);
                     setTimezone(response.data.data.timezone.code)
-                    // console.log(response.data.data)
+                    console.log(response.data.data)
                     // console.log(response.data.data.location.city.name)
                 } catch (error) {
                     setError('Error getting location ' + error.message);
