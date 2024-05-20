@@ -1,13 +1,13 @@
 import './App.css';
 import Quotes from './components/Quotes/quotes';
-// import {location} from './location';
+import Location from './components/Location/location';
 import Data from './components/Data/data';
 // import Time from './components/Time/time';
 import MoreLessBtn from './components/MoreLessButton/morelessbutton';
 import React, { useState } from 'react';
 // import moment from 'moment-timezone';
 import Time from './components/Time/time';
-import ExpandView from './components/Expand/expand';
+// import ExpandView from './components/Expand/expand';
 
 function App() {
   const [moreLess, setMoreLess] = useState(true);
@@ -23,15 +23,10 @@ function App() {
     <div className={hour >= 17 ? "display-evening" : "display-morning"} >
       <div className="main-content-container">
         <Quotes moreLess={moreLess}/>
-        <Time
-        />
-    
-
-
-
-          <MoreLessBtn moreLess={moreLess} setMoreLess={setMoreLess} />        
-          
-          </div>
+        <Time moreLess={moreLess} setMoreLess={setMoreLess}/>
+        <Location />
+        <MoreLessBtn moreLess={moreLess} setMoreLess={setMoreLess} />                 
+      </div>
     <Data moreLess={moreLess} setMoreLess={setMoreLess}/>
 
     {/* <Data/> */}

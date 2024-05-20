@@ -9,7 +9,7 @@ body {
 }
 #root {
   width: 375px;
-  height: 667px;
+  /* height: 667px; */
   position: relative;
   margin: 0 auto;
   /* padding: 2em; */
@@ -54,7 +54,9 @@ body {
 }
 .main-content-container {
   border: 2px solid red;
+  height: 100%;
   z-index: 30;
+
 }
 .quote-wrapper {
   padding: 1.5em;
@@ -69,6 +71,7 @@ body {
 .quote-content {
   width: 95%;
   /* border: 1px solid green; */
+  margin-bottom: 4em;
 }
 .quote-text {
   font-size: .7em;
@@ -82,6 +85,8 @@ body {
 }
 .greating-container {
   margin-left: 1em;
+  margin-top: 6em;
+  margin-bottom: 0;
   display: flex;
   flex-direction: row;
   gap: .7em;
@@ -93,14 +98,42 @@ body {
 }
 .greating > span {
   visibility: hidden;
+  padding: 0;
+  margin: 0;
 }
 .time-container {
   margin-left: 1em;
+  padding: 0;
   margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  /* width: 20em; */
+  gap: 1em;
+  /* border: 2px solid yellow; */
 }
 .time-content {
   font-size: 6em;
   font-weight: 600;
+  /* width: 80%; */
+  /* border: 2px solid red; */
+}
+.abbr {
+  /* border: 2px solid green; */
+  text-align: center;
+  padding-top: 5.7em;
+  font-size: 1em;
+  font-weight: 300;
+  
+}
+.location-container {
+  margin-left: 1em;
+}
+.location-city {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+
 }
 
 .btn-more {
@@ -116,6 +149,8 @@ body {
   padding: 0;
   padding-left: 0.9em;
   padding-top: 0.1em;
+  margin-left: 1em;
+  margin-top: 4em;
   /* padding-right: auto; */
   justify-content: space-around;
 
@@ -123,4 +158,18 @@ body {
 .btn-svg circle {
   fill: #303030;
 
+}
+.expand-content {
+  background-color: green;
+  height: 256px;
+}
+.expand-content > p {
+  color: black;
+}
+.morning {
+  background-color: #979797;
+  opacity: 70%;
+}
+.evening > p {
+  color: white;
 }

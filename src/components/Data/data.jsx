@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function TimeDisplay({ moreLess }) {
+function TimeDisplay({ moreLess, hour }) {
     // const [abb, setAbb] = useState('');
     const [dayOfWeek, setDayOfWeek] = useState('');
     const [dayOfYear, setDayOfYear] = useState('');
@@ -29,10 +29,9 @@ function TimeDisplay({ moreLess }) {
     return (
         <>
         {!moreLess && (
-            <div className='expand-content'>
+            <div className={
+                hour >= 17 ? 'expand-content evening' : 'expand-content morning'}>
                 {error && <div>{error}</div>}
-
-                {/* <p>{abb}</p> */}
                 <p>Current Timezone {timeZone}</p>
                 <p>Day of the year {dayOfYear}</p>
                 <p>Day of the week {dayOfWeek}</p>
