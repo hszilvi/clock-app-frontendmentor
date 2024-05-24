@@ -21,7 +21,7 @@ function App() {
   return (
     <>
     <div className={hour >= 17 ? "display-evening" : "display-morning"} >
-      <div className="main-content-container">
+      <div className="main-content-container ">
         <Quotes moreLess={moreLess}/>
         <Time moreLess={moreLess} setMoreLess={setMoreLess}/>
         <Location />
